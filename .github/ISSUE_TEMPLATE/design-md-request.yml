@@ -1,0 +1,46 @@
+name: Design MD Request
+description: Request a DESIGN.md generated from a website
+title: "DESIGN.md for <your website>"
+labels: ["design-md"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Fill out the form below to request a DESIGN.md generation for your website.
+  - type: input
+    id: website
+    attributes:
+      label: Website URL
+      description: The website you want us to generate DESIGN.md for
+      placeholder: https://example.com
+    validations:
+      required: true
+
+  - type: input
+    id: email
+    attributes:
+      label: Delivery Email
+      description: Email address where we should send the generated DESIGN.md
+      placeholder: you@example.com
+    validations:
+      required: true
+
+  - type: dropdown
+    id: sponsor
+    attributes:
+      label: Do you want to prioritize your DESIGN.md generation request?
+      description: We receive many requests to generate DESIGN.md. As we maintain multiple open-source projects with limited bandwidth, sponsor-backed requests are prioritized. Select the "Priority DESIGN.md generation (awesome-design-md)" tier on [GitHub Sponsors](https://github.com/sponsors/VoltAgent/sponsorships?tier_id=602879).
+      options:
+        - "No, I am not a sponsor"
+        - "Yes, I am a GitHub Sponsor"
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Additional Details (optional)
+      description: Anything else you'd like us to know about this request
+    validations:
+      required: false
